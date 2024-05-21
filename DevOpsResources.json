@@ -53,8 +53,8 @@
                             "value": "[listCredentials(resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName')), '2017-10-01').passwords[0].value]"
                         }
                     ],
-                    "appCommandLine": "[parameters('startupCommand')]",
-                    "linuxFxVersion": "[concat('DOCKER|', reference(resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName'))).loginServer, '/', parameters('imageName'))]"
+                    "appCommandLine": "[parameters('startupCommand')]"
+                    // "linuxFxVersion": "[concat('DOCKER|', reference(resourceId('Microsoft.ContainerRegistry/registries', parameters('registryName'))).loginServer, '/', parameters('imageName'))]"
                 },
                 "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('hostingPlanName'))]"
             },
